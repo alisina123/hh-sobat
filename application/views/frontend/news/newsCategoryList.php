@@ -12,7 +12,7 @@
         <div class="form-group input-group">
             <input type="text" name="search" style="width:100%" id="search" class="form-control" value="<?=$keyword?>" placeholder="<?=lang('search')?>..">
             <div class="input-group-btn">
-                <button class="btn btn-fill btn-info" onclick="makeSearch('<?=site_url("main/weeknewsList")?>','SearchForm','searchResult');" type="button"><i class="fa fa-search"></i><?=lang('search')?></button>
+                <button class="btn btn-fill btn-info" onclick="makeSearch('<?=site_url("main/searchList")?>','SearchForm','searchResult');" type="button"><i class="fa fa-search"></i><?=lang('search')?></button>
             </div> 
         </div> 
     </div>

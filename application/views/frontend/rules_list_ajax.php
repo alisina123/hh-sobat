@@ -14,9 +14,7 @@
                     ?>
                   
                          <div class="positions-list-item">
-                            <h2>
-                               <b> <?=++$counter.': '?></b><a href="<?=site_url('main/getPresidencyById/'.$rec->id)?>"><?=substr($rec->$title,0,60)?></a>
-                            <br>
+                            
                             <?=$rec->$content?>
                             </h2>
                           

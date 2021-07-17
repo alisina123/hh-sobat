@@ -17,8 +17,52 @@
     </div>
   </form>
   <!-- END FORM--> 
+  <?php
+  if($record)
+  {
+?>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="company-item table-responsive table-full-width ulist">
+            <table class="table table-hover table-striped">
+                <thead>       
+                    <th>#</th> 
+                    <th><?=lang('Id')?></th> 
+                </thead>
+                <tbody> 
+                    <?php
+                    $counter = 0;
+                    foreach($record AS $rec)
+                    {
+                      $image='';    
+                      $image=base_url('uploads/img/slider/'.$rec->photo);
+                      ?>   
+                    <tr> 
+                        <td><?=++$counter?></td>
+                        <td><img src="<?=$image?>" alt="" width="15%" onClick="view(this);" onerror='epic(this)'></td> 
+                        
+                        </td>      
+                       <input type="hidden" id="delete_url" value="<?=site_url('backend/deleteSlider')?>"> 
+       
+                 <td> <a onclick="delete_record(<?=$rec->id?>)"  class="btn  btn-small btn-danger" ><?=lang('delete')?></a>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<?php
+  }
+  else
+  {
+      echo '<div  class="alert alert-danger fade in">'.lang('no_record_found').'</div>';
+  }
+ ?>
 
-
+    
 <script type="text/javascript">  
 function loadAjax() {
     //document.getElementById('result').innerHTML = '';
@@ -42,3 +86,14 @@ function loadAjax() {
     }
 }
 </script>
+<script type="text/javascript">
+        function delete_record(id)
+        {                                          
+            var url=document.getElementById('delete_url').value;
+            if (confirm("معلومات حذف شود"))
+            {
+            
+                window.location.href = url +'/'+ id;
+            }
+        } 
+    </script>

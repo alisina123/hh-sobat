@@ -34,7 +34,6 @@
                         <label for="type"><?=lang('type')?></label> 
                          <select name="type" id="type" class="form-control" required>
                                 <option value=""><?=lang('select')?></option> 
-                                <option value="4"><?=lang('past_leader')?></option> 
                                 <option value="5"><?=lang('current_leader')?></option> 
                                
                          </select>

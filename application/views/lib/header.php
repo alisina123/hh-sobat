@@ -7,9 +7,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-<meta name="harakat" content="harakat,harakat party,harakat political party,حرکت,حزب,حزب حرکت,حزب حرکت اسلامی,حزب حرکت اسلامی,حزب حرکت اسلامی مردم,,حزب حرکت اسلامی مردم افغانستان,,,,">
+<meta name="harakat" content="harakat,harakat party,harakat political party,">
 
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="<?=base_url()?>assets/fonts/profession/style.css" rel="stylesheet" type="text/css">
 <link href="<?=base_url()?>assets/libraries/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -57,6 +57,12 @@ float: right;
 width: 300px;
 border: 3px solid #73AD21;
 padding: 10px;
+@media screen and (max-width: 420px) {
+    header-nav nav nav-pills collapse{
+        
+    }
+            
+         
 }
 
 </style>                                                                                                  
@@ -224,23 +230,28 @@ $(function(){
 <div class="page-wrapper">
 <div class="header-wrapper hidden-print">
 <div class="header"> 
+
 <div class="header-bottom container" style="  border-width: 5px; border: 5px solid red; border-radius: 1px;border: 0px  #fff; border-color: red;border-style: solid; background-color: #fff;">
 
-    
+
     <a href="<?=site_url('main/changeLang/'."en")?>">English</a> &nbsp;&nbsp;
     
-        <a href="<?=site_url('main/changeLang/'."dr")?>">دری</a>
+        <a font-family: Bahij_Bold; href="<?=site_url('main/changeLang/'."dr")?>">دری</a>
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="social"  href="www.facebook.com"><i aria-hidden="true" class="fa fa-facebook" data-toggle="tooltip" title="Facebook"></i></a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="social" href="www.facebook.com"><i aria-hidden="true" class="fa fa-twitter" data-toggle="tooltip" title="twitter"></i></a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="social" style="color:#c8102e" href="www.facebook.com"><i aria-hidden="true" class="fa fa-youtube-play" data-toggle="tooltip" title="youtube"></i></a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a class="social" style="color:#c8102e" href="www.facebook.com"><i aria-hidden="true" class="fa fa-instagram" data-toggle="tooltip" title="instagram"></i></a>
-
-    
+         <?php 
+         echo "Today is " . date("Y/m/d") . "<br>";
+         
+         ?>
+         
 </div><!-- /.header-top -->
 
-        
+    <span><?php  ?>
+</span>    
 <div class="header-bottom container">   
     <div class="container"> 
         <ul class="header-nav nav nav-pills collapse" style="float: <?=shortlang()=='en'?'left':'right'?>;">
@@ -391,16 +402,6 @@ $(function(){
     </div><!-- /.container -->
     
 </div><!-- /.header-bottom -->
-
-
-
-
-
-
-
-
-
-
 
 </div><!-- /.header -->
 

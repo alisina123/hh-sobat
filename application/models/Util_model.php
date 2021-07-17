@@ -421,7 +421,7 @@
         {
             $this->db->limit($limit,$start);
         }
-        $this->db->order_by('news_category.id','DESC');
+        $this->db->order_by('news_category.id','ASC');
         $get = $this->db->get(); 
         //ex($this->db->last_query());   
         if($get->num_rows()>0)

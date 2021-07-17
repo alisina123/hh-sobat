@@ -529,18 +529,16 @@
     } 
     function countNewsCategory()
     {        
-                                                   
         $this->db->select('count(*) AS total');
-        $this->db->from('news');
-        //$this->db->join('news_category ncat','ncat.id=news.category_id');
+        $this->db->from('news'); 
+        $this->db->join('news_category ncat','ncat.id=news.category_id'); 
+        $this->db->group_by('category_id');
         $get= $this->db->get();   
         if($get->num_rows()>0)
         {
             return $get->row()->total;
         }
         return false; 
-          
-       
     } 
  
    

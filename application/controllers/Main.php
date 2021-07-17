@@ -754,7 +754,7 @@ class Main extends CI_Controller
       function weeknewsList()
       {
           
-          {
+          
               $start = post('start');
               if(isEmpty($start))
               {
@@ -762,6 +762,7 @@ class Main extends CI_Controller
               } 
               $keyword    = post('search');
               $data['record']=$this->main_model->getAllWeeks($start,config_item('per_page'));
+              
               $data['latest']=$this->main_model->getLatestNews();
              // print_r($data['record']);exit;
               $total=$this->main_model->countAllWeeks(); 
@@ -792,7 +793,7 @@ class Main extends CI_Controller
               $this->load->view('lib/footer');
 
             
-          }  
+         
          
       }
 

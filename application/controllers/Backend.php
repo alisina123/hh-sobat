@@ -329,14 +329,17 @@
     function addToSliderView()
     {
         $this->session->set_userdata('active','3');
+        //$data['record']=$this->backend_model->getSlider();
+        $data['record']=$this->util_model->getRecord('*','slider');
+        //pint_r( $data['record']);exit;
         $this->load->view('lib/header');   
-        $content = $this->load->view('backend/add_to_slider',true,true);    
+        $content = $this->load->view('backend/add_to_slider',$data,true);    
         frame($content,true);
         $this->load->view('lib/footer');
     }
     function addToSlider()
     {         
-          
+           
         $photo=$this->util->addImage('photo','./uploads/img/slider/');
         $data = array(              
             'photo'=>$photo            
@@ -1344,7 +1347,9 @@
                     'photo'=>$photo,               
                     'gender'=>post('gender'),               
                     'biography_'.shortlang()=>post('biography')               
-                    );                                                         
+                    );  
+                    
+           // print_r($data);exit;
             $result = $this->util_model->insertRecords($data,'person'); 
             if($result)
             {
@@ -2096,6 +2101,32 @@
                 redirect(base_url('backend/weeknewsList')); 
             }
         }  
+
+        
+        function deleteSlider($id=0)
+        {
+            
+            if($id !=0)
+        
+            {
+                 $result=$this->util_model->deleteRecord('id',$id,'slider');
+                 //print_r($result);exit;
+                 if($result)
+                {
+                    $this->session->set_flashdata("msg",'<div class="alert alert-success fade in">'.lang('successfully_done').'</div>');
+                    redirect(base_url('backend/addToSliderView'));  
+                }
+                else
+                {
+                    $this->session->set_flashdata("msg",'<div class="alert alert-danger fade in">'.lang('try_again').'</div>');
+                    redirect(base_url('backend/addToSliderView'));    
+                }
+            }
+            else
+            {
+                redirect(base_url('backend/addToSliderView')); 
+            }
+        } 
     
   }
 ?>

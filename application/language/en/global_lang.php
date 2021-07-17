@@ -1,5 +1,5 @@
 <?php
-    $lang['system_title']                                      ="Harakat islamic party of afghanistan people";  
+    $lang['system_title']                                      ="Harakat Sobat Islamic party of afghanistan people";  
                                                                     
     $lang['search']                                     ="Search";   
     $lang['no_record_found']                            ="No record found";  
@@ -62,8 +62,8 @@
    
     $lang['change_password']                                       ="Change password";  
     $lang['logout']                                     ="Logout"; 
-    $lang['weeknews']                                       ="WeeksNews";
-    $lang['add_weeknews']                                       =" Add_weeksNews ";
+    $lang['weeknews']                                       ="Weekly";
+    $lang['add_weeknews']                                       =" Add_Weekly ";
   //general
     $lang['welcome']                                       ="Welcome";          
     $lang['name']                                       ="Name";                
@@ -182,7 +182,7 @@
     $lang['current_province']                                       ="Current province";  
     $lang['current_district']                                       ="Current district";  
     $lang['current_village']                                       ="Current village";  
-    $lang['term_of_policy']                                       ="تحلیف: بنام خداوند بزرگ )(ج) سوگند یاد میکنم که به حزب حرکت اسلامی مردم افغانستان متعهد بوده تمام قوانین و مقررات حزبی را جدأ رعایت نموده در حفظ منافع حزبی سعی جدی به عمل می آوردم. به هیچ یکی از احزاب سیاسی دیگر ارتباط تشکیلاتی نداشته و ندارم ، در صورت تخلف از موادات مرامنامه و اساسنامه حزب تطبیق مجازات خزبی را بالای خود لازم می دارم";  
+    $lang['term_of_policy']                                       ="تحلیف: بنام خداوند بزرگ )(ج) سوگند یاد میکنم که به حزب حرکت اسلامی مردم افغانستان متعهد بوده تمام قوانین و مقررات حزبی را جدأ رعایت نموده در حفظ منافع حزبی سعی جدی به عمل می آوردم. به هیچ یکی از احزاب سیاسی دیگر ارتباط تشکیلاتی نداشته و ندارم ، در صورت تخلف از موادات مرامنامه و اساسنامه حزب تطبیق مجازات حزبی را بالای خود لازم می دارم";  
     $lang['term_of_policy_recommender']                                       ="بنده از شایسته گی و اهلیت برادر که شهرتش در فوق تذکر یافته است. تائید و تصدیق نموده عضویت آنرا در حزب حرکت اسلامی مردم افغانستان پیشنهاد می داردم";  
     $lang['personal']                                       ="Personal";                
     $lang['address']                                       ="Address";                 

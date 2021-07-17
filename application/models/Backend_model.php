@@ -121,6 +121,18 @@
         }
         return false;      
     }
+    
+    function getSlider()
+    {
+        $this->db->select('count(*) AS total');
+        $this->db->from('slider');
+        $get= $this->db->get();   
+        if($get->num_rows()>0)
+        {
+            return $get->row()->total;
+        }
+        return false;      
+    }
      function getAllMembers($start=0, $limit = 0)
     {
         $keyword = $this->input->post('search');  

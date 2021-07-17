@@ -40,16 +40,16 @@
     </div><!-- /.resume-main -->             
 </div><!-- /.resume -->
      
-     <?php
-             }
-      ?>
-             <div  class="col-md-12 col-sm-12 col-xs-12 pgn"><?=@$pagination?></div>
-     
-    <?php
-        }
-        else
-        {
-            echo '<div class="alert alert-danger fade in">'.lang('no_record_found').'</div>';
-        }
-    ?>
-    </div>
+<?php
+                
+            }                 
+                ?>               
+            <div  class="col-md-12 pgn"><?=@$pagination?></div>            
+      <?php 
+ }
+ else
+ {
+     echo '<div  class="alert alert-danger fade in">'.lang('no_record_found').'</div>';
+ }
+?>
+

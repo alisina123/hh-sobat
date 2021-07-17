@@ -23,7 +23,9 @@
             </ul>
            <form method="POST" action="<?=site_url('main/register')?>" enctype="multipart/form-data" onsubmit="javascript: void(0);loadAjax();">
      
-            <div class="tab-content">
+            
+         
+           <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="personal">
                     <div class="row">
                             <div class="col-sm-12">
@@ -63,8 +65,20 @@
                              </div>
                             
                              <div class="col-sm-12">
-                               
-                              
+                                 <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="tribe"><?=lang('tribe')?></label>
+                                        <input type="text" class="form-control rq"  name="tribe" id="tribe" placeholder="<?=lang('tribe')?>" required>
+                                        <?=form_error('tribe');?>
+                                   </div><!-- /.form-group --> 
+                                 </div>
+                                   <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="date_of_birth"><?=lang('date_of_birth')?></label>
+                                            <input type="text" class="form-control rq dates"   name="date_of_birth" id="date_of_birth" required placeholder="<?=lang('date_of_birth')?>">
+                                          <?=form_error('date_of_birth');?>
+                                        </div>
+                                 </div>
                              </div>
                               <div class="col-sm-12">
                                     <div class="col-sm-6">
@@ -114,8 +128,8 @@
                                        </div><!-- /.form-group -->   
                                     </div>
                                  </div>
-                                    <div class="col-sm-12">
-                                    <div class="col-sm-6">      
+                                      <div class="col-sm-12">
+                                      <div class="col-sm-6">      
                                             <div class="form-group">
                                                 <label for="phone_number"><?=lang('phone_number')?></label>
                                                 <input type="text" class="form-control rq" required  name="phone_number" id="phone_number" placeholder="<?=lang('phone_number')?>">
@@ -123,8 +137,11 @@
                                             </div>  
                                      </div>
                                      <div class="col-sm-6">
-                                     <textarea id="w3review" name="w3review" rows="4"  cols="38">
-                                        </textarea> 
+                                      <div class="form-group">
+                                            <label for="email"><?=lang('email')?></label>
+                                            <input type="email" class="form-control rq"  name="email" id="email" placeholder="<?=lang('email')?>" required>
+                                            <?=form_error('email');?>
+                                       </div><!-- /.form-group -->   
                                     </div>
                                  </div>
                                    <div class="col-sm-12">  
@@ -230,33 +247,6 @@
                                         <?=form_error('recommender_address');?>
                                    </div><!-- /.form-group -->  
                                 </div>
-                             </div>
-                              
-                              <div class="col-sm-12">
-                                <div class="col-sm-6">
-                                   <div class="form-group">
-                                        <label for="phone_number1"><?=lang('phone_number1')?></label>
-                                        <input type="text" class="form-control rq"  name="phone_number1" id="phone_number1" placeholder="<?=lang('phone_number')?>" required>
-                                        <?=form_error('phone_number');?>
-                                   </div><!-- /.form-group -->  
-                                </div>
-                                 <div class="col-sm-6">
-                                   <div class="form-group">
-                                        <label for="card_number"><?=lang('card_number')?></label>
-                                        <input type="text" class="form-control rq"  name="card_number" id="card_number" placeholder="<?=lang('card_number')?>">
-                                        <?=form_error('card_number');?>
-                                   </div><!-- /.form-group -->  
-                                </div>
-                             </div>
-                             <div class="col-sm-12">
-                                <div class="col-sm-12">
-                                   <div class="form-group">
-                                        <label for="phone_number1"><?=lang('phone_number1')?></label>
-                                        <input type="text" class="form-control rq"  name="phone_number1" id="phone_number1" placeholder="<?=lang('phone_number')?>" required>
-                                        <?=form_error('phone_number');?>
-                                   </div><!-- /.form-group -->  
-                                </div>
-                               
                              </div>
                                <div class="col-sm-12">  
                                    <div class="form-group"> 

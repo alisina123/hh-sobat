@@ -14,7 +14,7 @@
                     <h2>
                        <b> <?=++$counter.': '?></b><a href="<?=site_url('main/getPresidencyById/'.$rec->id)?>"><?=substr($rec->$title,0,60)?></a>
                     </h2>
-                     <h5><img src="<?=$photo?>" class="img-boss" alt="" onClick="view(this);" onerror='epic(this)'><?=' '.lang('boss').': '.$rec->boss_name?></</h5>                                                
+                     <h5><img src="<?=$photo?>" class="img-boss" alt="" onClick="view(this);" style ="font-style:bold" onerror='epic(this)'><?='  '.$rec->boss_name?></</h5>                                                
     
                     <h3 style="font-size: 16px;"><?=substr($rec->$description,0,200)?></h3>
 

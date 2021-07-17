@@ -3,7 +3,6 @@ if($record)
 {           
 ?>
 
-      
 <div class="nlist" style="border-radius: 100px;margin-top:20px">
    <?php
         $counter =0;
@@ -44,7 +43,7 @@ if($record)
                 <div class="row" > 
                   <div class="post-box-image col-lg-3" style="float: <?=shortlang()=='en'?'':'right'?>;">
                     <a href="#">
-                        <img src="<?=$image?>" style="height:100px;margin-top:20px" alt="" onClick="view(this);" onerror='epic(this)'>
+                        <img src="<?=$image?>" style="height:100%;margin-top:20px" alt="" onClick="view(this);" onerror='epic(this)'>
                     </a>
                 </div><!-- /.post-box-image --> 
                 <div class="post-box-content col-lg-9">
